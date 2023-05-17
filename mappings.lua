@@ -6,6 +6,12 @@ M.general = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
     ["<leader>tt"] = { "<cmd> TroubleToggle <CR>", "Trouble" },
 
+    -- Navigation
+    ["<C-h>"] = { "<cmd> TmuxNavigateLeft <CR>", "window left" },
+    ["<C-l>"] = { "<cmd> TmuxNavigateRight <CR>", "window right" },
+    ["<C-j>"] = { "<cmd> TmuxNavigateDown <CR>", "window down" },
+    ["<C-k>"] = { "<cmd> TmuxNavigateUp <CR>", "window up" },
+
     -- DEBUG
     ["<leader>dh"] = { "<cmd>lua require'dap.ui.widgets'.hover()<CR>", "Debug Hover" },
     ["<leader>dw"] = {
