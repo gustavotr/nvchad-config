@@ -104,6 +104,14 @@ local plugins = {
     lazy = false,
   },
 
+  {
+    "iamcco/markdown-preview.nvim",
+    build = "cd app && npm install",
+    config = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown" },
+  },
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
