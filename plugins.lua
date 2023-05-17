@@ -99,6 +99,11 @@ local plugins = {
     cmd = "LazyGit",
   },
 
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
