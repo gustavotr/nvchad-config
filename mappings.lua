@@ -11,6 +11,8 @@ M.general = {
     ["<C-l>"] = { "<cmd> TmuxNavigateRight <CR>", "window right" },
     ["<C-j>"] = { "<cmd> TmuxNavigateDown <CR>", "window down" },
     ["<C-k>"] = { "<cmd> TmuxNavigateUp <CR>", "window up" },
+    ["<S-h>"] = { "<cmd> bp <CR>", "previous buffer" },
+    ["<S-l>"] = { "<cmd> bn <CR>", "next buffer" },
 
     -- DEBUG
     ["<leader>dh"] = { "<cmd>lua require'dap.ui.widgets'.hover()<CR>", "Debug Hover" },
