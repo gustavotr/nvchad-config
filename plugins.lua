@@ -94,6 +94,11 @@ local plugins = {
     end,
   },
 
+  {
+    "kdheepak/lazygit.nvim",
+    cmd = "LazyGit",
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

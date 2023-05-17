@@ -48,6 +48,7 @@ M.general = {
     -- GIT
     ["<leader>gd"] = { "<cmd>Gitsigns diffthis<cr>", "Git Diff" },
     ["<leader>gp"] = { "<cmd>Gitsigns preview_hunk<cr>", "Git Preview" },
+    ["<leader>gg"] = { "<cmd>LazyGit<cr>", "LazyGit" },
   },
 }
 
