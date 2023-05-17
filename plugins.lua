@@ -88,6 +88,12 @@ local plugins = {
         "microsoft/vscode-js-debug",
         build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
       },
+      {
+        "theHamsta/nvim-dap-virtual-text",
+        config = function()
+          require("nvim-dap-virtual-text").setup()
+        end,
+      },
     },
     config = function()
       require "custom.configs.dap"
@@ -111,6 +117,30 @@ local plugins = {
       vim.g.mkdp_filetypes = { "markdown" }
     end,
     ft = { "markdown" },
+  },
+
+  {
+    "goolord/alpha-nvim",
+    lazy = false,
+    dependencies = {
+      {
+        "Shatur/neovim-session-manager",
+        config = function()
+          local config = require "session_manager.config"
+          require("session_manager").setup {
+            autoload_mode = config.AutoloadMode.CurrentDir,
+          }
+        end,
+      },
+    },
+    config = function()
+      require("alpha").setup(require("alpha.themes.dashboard").config)
+    end,
+  },
+
+  {
+    "stevearc/dressing.nvim",
+    event = "BufRead",
   },
   -- To make a plugin not be loaded
   -- {
