@@ -15,6 +15,7 @@ for _, language in ipairs { "typescript", "javascript" } do
       name = "Launch file",
       program = "${file}",
       cwd = "${workspaceFolder}",
+      skipFiles = { "**/node_modules/**" },
     },
     {
       name = "Attach",
@@ -23,7 +24,7 @@ for _, language in ipairs { "typescript", "javascript" } do
       cwd = "${workspaceFolder}",
       sourceMaps = true,
       protocol = "inspector",
-      skipFiles = { "<node_internals>/**/*.js" },
+      skipFiles = { "**/node_modules/**" },
     },
     {
       type = "pwa-node",
@@ -31,6 +32,7 @@ for _, language in ipairs { "typescript", "javascript" } do
       name = "Attach to process",
       processId = require("dap.utils").pick_process,
       cwd = "${workspaceFolder}",
+      skipFiles = { "**/node_modules/**" },
     },
     {
       type = "pwa-node",
@@ -46,6 +48,7 @@ for _, language in ipairs { "typescript", "javascript" } do
       cwd = "${workspaceFolder}",
       console = "integratedTerminal",
       internalConsoleOptions = "neverOpen",
+      skipFiles = { "**/node_modules/**" },
     },
     {
       type = "pwa-node",
@@ -67,6 +70,7 @@ for _, language in ipairs { "typescript", "javascript" } do
       },
       rootPath = "${workspaceFolder}$",
       cwd = "${workspaceFolder}",
+      skipFiles = { "**/node_modules/**" },
     },
   }
 end
@@ -80,7 +84,7 @@ for _, language in ipairs { "typescriptreact", "javascriptreact" } do
       cwd = vim.fn.getcwd(),
       sourceMaps = true,
       protocol = "inspector",
-      skipFiles = { "<node_internals>/**/*.js" },
+      skipFiles = { "**/node_modules/**" },
     },
     {
       type = "pwa-chrome",
@@ -92,12 +96,14 @@ for _, language in ipairs { "typescriptreact", "javascriptreact" } do
       protocol = "inspector",
       port = 9222,
       webRoot = "${workspaceFolder}",
+      skipFiles = { "**/node_modules/**" },
     },
     {
       type = "pwa-chrome",
       name = "Launch Chrome",
       request = "launch",
       url = "http://localhost:3000",
+      skipFiles = { "**/node_modules/**" },
     },
   }
 end

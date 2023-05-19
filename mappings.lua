@@ -13,7 +13,7 @@ M.general = {
     ["<C-k>"] = { "<cmd> TmuxNavigateUp <CR>", "window up" },
     ["<S-h>"] = { "<cmd> bp <CR>", "previous buffer" },
     ["<S-l>"] = { "<cmd> bn <CR>", "next buffer" },
-    ["<leader>co"] = { "<cmd>wa|%bd|e#|bd#<CR>", "Close other buffers" },
+    ["<leader>co"] = { "<cmd>wa|%bd|e#<CR>", "Close other buffers" },
     ["<leader>sl"] = { "<cmd>SessionManager load_last_session<CR>", "Load last session" },
 
     -- DEBUG

@@ -14,19 +14,19 @@ local sources = {
   formatting.deno_fmt, -- chose deno for ts/js files cuz its very fast!
   formatting.prettier,
 
-  formatting.eslint,
-  code_actions.eslint,
-  diagnostics.eslint,
+  -- formatting.eslint,
+  -- code_actions.eslint,
+  -- diagnostics.eslint,
 
   -- Lua
   formatting.stylua,
 
   -- cpp
-  formatting.clang_format,
+  -- formatting.clang_format,
 
   diagnostics.codespell,
-  diagnostics.markdownlint,
-  diagnostics.tsc,
+  -- diagnostics.markdownlint,
+  -- diagnostics.tsc,
   diagnostics.gospel,
 }
 
