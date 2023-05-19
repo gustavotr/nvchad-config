@@ -5,10 +5,18 @@ local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
 local servers = {
-  "html",
+  "angularls",
   "cssls",
+  "denols",
+  "eslint",
+  "html",
+  "jsonls",
   "tsserver",
-  "clangd",
+  "lua_ls",
+  "prosemd_lsp",
+  "rust_analyzer",
+  "sqlls",
+  "yamlls",
 }
 
 for _, lsp in ipairs(servers) do
@@ -20,3 +28,14 @@ end
 
 --
 -- lspconfig.pyright.setup { blabla}
+--
+
+lspconfig.yamlls.setup {
+  settings = {
+    yaml = {
+      schemas = {
+        kubernetes = "globPattern",
+      },
+    },
+  },
+}

@@ -10,24 +10,23 @@ local code_actions = null_ls.builtins.code_actions
 
 local sources = {
 
-  -- webdev stuff
-  formatting.deno_fmt, -- chose deno for ts/js files cuz its very fast!
+  code_actions.eslint,
+
+  formatting.deno_fmt,
   formatting.prettier,
-
-  -- formatting.eslint,
-  -- code_actions.eslint,
-  -- diagnostics.eslint,
-
-  -- Lua
   formatting.stylua,
-
-  -- cpp
   -- formatting.clang_format,
 
+  diagnostics.eslint,
   diagnostics.codespell,
+  diagnostics.gospel,
+  diagnostics.jsonlint,
+  diagnostics.sqlfluff,
+  diagnostics.stylelint,
+  diagnostics.tsc,
+  diagnostics.yamllint,
   -- diagnostics.markdownlint,
   -- diagnostics.tsc,
-  diagnostics.gospel,
 }
 
 local async_formatting = function(bufnr)
