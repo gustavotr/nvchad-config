@@ -29,4 +29,15 @@ require("mason-lspconfig").setup_handlers {
   -- ["rust_analyzer"] = function()
   --   require("rust-tools").setup {}
   -- end,
+  ["yamlls"] = function()
+    require("yamlls").setup {
+      settings = {
+        yaml = {
+          schemas = {
+            kubernetes = "globPattern"
+          }
+        }
+      }
+    }
+  end,
 }
