@@ -12,7 +12,7 @@ local sources = {
 
   code_actions.eslint,
 
-  formatting.deno_fmt,
+  formatting.eslint,
   formatting.prettier,
   formatting.stylua,
   -- formatting.clang_format,
@@ -26,7 +26,6 @@ local sources = {
   diagnostics.tsc,
   diagnostics.yamllint,
   -- diagnostics.markdownlint,
-  -- diagnostics.tsc,
 }
 
 local async_formatting = function(bufnr)
