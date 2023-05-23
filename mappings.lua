@@ -5,6 +5,7 @@ M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
     ["<leader>tt"] = { "<cmd> TroubleToggle <CR>", "Trouble" },
+    ["<leader>gl"] = { "<cmd> lua vim.diagnostic.open_float() <CR>", "Line Diagnostic" },
 
     -- Navigation
     ["<C-h>"] = { "<cmd> TmuxNavigateLeft <CR>", "window left" },
