@@ -10,20 +10,19 @@ local code_actions = null_ls.builtins.code_actions
 
 local sources = {
 
-  code_actions.eslint,
+  code_actions.eslint_d,
 
-  formatting.eslint,
-  formatting.prettier,
+  formatting.eslint_d,
+  formatting.prettierd,
   formatting.stylua,
   -- formatting.clang_format,
 
-  diagnostics.eslint,
+  diagnostics.eslint_d,
   diagnostics.codespell,
   diagnostics.gospel,
   diagnostics.jsonlint,
   diagnostics.sqlfluff,
   diagnostics.stylelint,
-  diagnostics.tsc,
   diagnostics.yamllint,
   -- diagnostics.markdownlint,
 }
