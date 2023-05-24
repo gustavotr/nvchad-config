@@ -107,7 +107,7 @@ local plugins = {
 
   {
     "christoomey/vim-tmux-navigator",
-    lazy = false,
+    event = "BufRead",
   },
 
   {
@@ -136,11 +136,6 @@ local plugins = {
     config = function()
       require("alpha").setup(require("alpha.themes.dashboard").config)
     end,
-  },
-
-  {
-    "stevearc/dressing.nvim",
-    event = "BufRead",
   },
   -- To make a plugin not be loaded
   -- {

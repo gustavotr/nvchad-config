@@ -63,6 +63,25 @@ M.general = {
   },
 }
 
--- more keybinds!
+M.nvterm = {
+  t = {
+    ["<C-k>"] = {
+      "<cmd>lua require'nvterm.terminal'.send('<C-x>') vim.cmd('TmuxNavigateUp')<CR>",
+      "",
+    },
+    ["<C-j>"] = {
+      "<cmd>lua require'nvterm.terminal'.send('<C-x>') vim.cmd('TmuxNavigateDown')<CR>",
+      "",
+    },
+    ["<C-h>"] = {
+      "<cmd>lua require'nvterm.terminal'.send('<C-x>') vim.cmd('TmuxNavigateLeft')<CR>",
+      "",
+    },
+    ["<C-l>"] = {
+      "<cmd>lua require'nvterm.terminal'.send('<C-x>') vim.cmd('TmuxNavigateRight')<CR>",
+      "",
+    },
+  },
+}
 
 return M
