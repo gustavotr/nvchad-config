@@ -4,16 +4,17 @@ local M = {}
 M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
-    ["<leader>tt"] = { "<cmd> TroubleToggle <CR>", "Trouble" },
-    ["<leader>gl"] = { "<cmd> lua vim.diagnostic.open_float() <CR>", "Line Diagnostic" },
+    ["<leader>tt"] = { "<cmd>TroubleToggle<CR>", "Toggle Trouble" },
+    ["<leader>tc"] = { "<cmd>CoverageToggle<CR>", "Toggle Coverage" },
+    ["<leader>gl"] = { "<cmd>lua vim.diagnostic.open_float() <CR>", "Line Diagnostic" },
 
     -- Navigation
-    ["<C-h>"] = { "<cmd> TmuxNavigateLeft <CR>", "window left" },
-    ["<C-l>"] = { "<cmd> TmuxNavigateRight <CR>", "window right" },
-    ["<C-j>"] = { "<cmd> TmuxNavigateDown <CR>", "window down" },
-    ["<C-k>"] = { "<cmd> TmuxNavigateUp <CR>", "window up" },
-    ["<S-h>"] = { "<cmd> bp <CR>", "previous buffer" },
-    ["<S-l>"] = { "<cmd> bn <CR>", "next buffer" },
+    ["<C-h>"] = { "<cmd>TmuxNavigateLeft<CR>", "window left" },
+    ["<C-l>"] = { "<cmd>TmuxNavigateRight<CR>", "window right" },
+    ["<C-j>"] = { "<cmd>TmuxNavigateDown<CR>", "window down" },
+    ["<C-k>"] = { "<cmd>TmuxNavigateUp<CR>", "window up" },
+    ["<S-h>"] = { "<cmd>bp<CR>", "previous buffer" },
+    ["<S-l>"] = { "<cmd>bn<CR>", "next buffer" },
     ["<leader>co"] = { "<cmd>wa|%bd|e#<CR>", "Close other buffers" },
     ["<leader>sl"] = { "<cmd>SessionManager load_last_session<CR>", "Load last session" },
 

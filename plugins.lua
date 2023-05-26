@@ -137,6 +137,24 @@ local plugins = {
       require("alpha").setup(require("alpha.themes.dashboard").config)
     end,
   },
+  {
+    "manzeloth/live-server",
+    cmd = "LiveServer",
+    build = "npm i -g live-server",
+  },
+  {
+    "andythigpen/nvim-coverage",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    cmd = "Coverage",
+    config = function()
+      require("coverage").setup()
+    end,
+  },
+  -- {
+  --   dir = "~/Documentos/tools/nvim-coverage",
+  --   config = true,
+  --   cmd = "Coverage",
+  -- },
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
