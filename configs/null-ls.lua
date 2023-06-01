@@ -15,6 +15,7 @@ local sources = {
   formatting.prettierd,
   formatting.eslint_d,
   formatting.stylua,
+  formatting.phpcsfixer,
   -- formatting.clang_format,
 
   diagnostics.eslint_d,

@@ -3,7 +3,6 @@ local M = {}
 
 M.general = {
   n = {
-    [";"] = { ":", "enter command mode", opts = { nowait = true } },
     ["<leader>tt"] = { "<cmd>TroubleToggle<CR>", "Toggle Trouble" },
     ["<leader>tc"] = { "<cmd>CoverageToggle<CR>", "Toggle Coverage" },
     ["<leader>gl"] = { "<cmd>lua vim.diagnostic.open_float() <CR>", "Line Diagnostic" },
@@ -13,8 +12,18 @@ M.general = {
     ["<C-l>"] = { "<cmd>TmuxNavigateRight<CR>", "window right" },
     ["<C-j>"] = { "<cmd>TmuxNavigateDown<CR>", "window down" },
     ["<C-k>"] = { "<cmd>TmuxNavigateUp<CR>", "window up" },
-    ["<S-h>"] = { "<cmd>bp<CR>", "previous buffer" },
-    ["<S-l>"] = { "<cmd>bn<CR>", "next buffer" },
+    ["<S-l>"] = {
+      function()
+        require("nvchad_ui.tabufline").tabuflineNext()
+      end,
+      "Goto next buffer",
+    },
+    ["<S-h>"] = {
+      function()
+        require("nvchad_ui.tabufline").tabuflinePrev()
+      end,
+      "Goto prev buffer",
+    },
     ["<leader>co"] = { "<cmd>wa|%bd|e#<CR>", "Close other buffers" },
     ["<leader>sl"] = { "<cmd>SessionManager load_last_session<CR>", "Load last session" },
 

@@ -72,6 +72,7 @@ local plugins = {
 
   {
     "folke/trouble.nvim",
+    cmd = "TroubleToggle",
     config = function()
       require("trouble").setup {}
     end,
@@ -103,6 +104,13 @@ local plugins = {
   {
     "kdheepak/lazygit.nvim",
     cmd = "LazyGit",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "nvim-lua/plenary.nvim",
+    },
+    config = function()
+      require("telescope").load_extension "lazygit"
+    end,
   },
 
   {
@@ -147,7 +155,20 @@ local plugins = {
     dependencies = { "nvim-lua/plenary.nvim" },
     cmd = "Coverage",
     config = function()
-      require("coverage").setup()
+      require("coverage").setup {
+        auto_reload = true,
+        load_coverage_cb = function(ftype)
+          vim.notify("Loaded " .. ftype .. " coverage")
+        end,
+      }
+    end,
+  },
+  {
+    "nosduco/remote-sshfs.nvim",
+    cmd = "RemoteSSHFSConnect",
+    config = function()
+      require("remote-sshfs").setup()
+      require("telescope").load_extension "remote-sshfs"
     end,
   },
   -- {
