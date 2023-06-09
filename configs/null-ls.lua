@@ -13,7 +13,6 @@ local sources = {
   code_actions.eslint_d,
 
   formatting.prettierd,
-  formatting.eslint_d,
   formatting.stylua,
   formatting.phpcsfixer,
   -- formatting.clang_format,

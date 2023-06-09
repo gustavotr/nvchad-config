@@ -37,19 +37,19 @@ M.general = {
       "<cmd>lua require'dapui'.toggle()<cr>",
       "Debug UI",
     },
-    ["<F5>"] = {
+    ["<leader>dc"] = {
       "<cmd>lua require'dap'.continue()<cr>",
       "Debug Continue",
     },
-    ["<F10>"] = {
+    ["<leader>do"] = {
       "<cmd>lua require'dap'.step_over()<cr>",
       "Debug Step Over",
     },
-    ["<F11>"] = {
+    ["<leader>di"] = {
       "<cmd>lua require'dap'.step_into()<cr>",
       "Debug Step Into",
     },
-    ["<F12>"] = {
+    ["<leader>du"] = {
       "<cmd>lua require'dap'.step_out()<cr>",
       "Debug Step Into",
     },
