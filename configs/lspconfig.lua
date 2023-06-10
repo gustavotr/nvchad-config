@@ -12,7 +12,6 @@ local servers = {
   "tsserver",
   "lua_ls",
   "prosemd_lsp",
-  "rust_analyzer",
   "sqlls",
   "yamlls",
   "intelephense",

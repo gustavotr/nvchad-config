@@ -15,6 +15,13 @@ local plugins = {
           require "custom.configs.null-ls"
         end,
       },
+      {
+        "simrat39/rust-tools.nvim",
+        config = function()
+          require("rust-tools").setup()
+        end,
+        build = "rustup component add rust-analyzer",
+      },
     },
     config = function()
       require "plugins.configs.lspconfig"
