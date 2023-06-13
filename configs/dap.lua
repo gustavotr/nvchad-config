@@ -15,7 +15,7 @@ for _, language in ipairs { "typescript", "javascript" } do
       name = "Launch file",
       program = "${file}",
       cwd = "${workspaceFolder}",
-      skipFiles = { "**/node_modules/**" },
+      skipFiles = { "<node_internals>/**", "**/node_modules/**" },
     },
     {
       name = "Attach",
@@ -24,7 +24,7 @@ for _, language in ipairs { "typescript", "javascript" } do
       cwd = "${workspaceFolder}",
       sourceMaps = true,
       protocol = "inspector",
-      skipFiles = { "**/node_modules/**" },
+      skipFiles = { "<node_internals>/**", "**/node_modules/**" },
     },
     {
       type = "pwa-node",
@@ -32,7 +32,7 @@ for _, language in ipairs { "typescript", "javascript" } do
       name = "Attach to process",
       processId = require("dap.utils").pick_process,
       cwd = "${workspaceFolder}",
-      skipFiles = { "**/node_modules/**" },
+      skipFiles = { "<node_internals>/**", "**/node_modules/**" },
     },
     {
       type = "pwa-node",
@@ -48,7 +48,7 @@ for _, language in ipairs { "typescript", "javascript" } do
       cwd = "${workspaceFolder}",
       console = "integratedTerminal",
       internalConsoleOptions = "neverOpen",
-      skipFiles = { "**/node_modules/**" },
+      skipFiles = { "<node_internals>/**", "**/node_modules/**" },
     },
     {
       type = "pwa-node",
@@ -70,7 +70,7 @@ for _, language in ipairs { "typescript", "javascript" } do
       },
       rootPath = "${workspaceFolder}$",
       cwd = "${workspaceFolder}",
-      skipFiles = { "**/node_modules/**" },
+      skipFiles = { "<node_internals>/**", "**/node_modules/**" },
     },
   }
 end

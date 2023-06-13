@@ -45,6 +45,10 @@ M.general = {
       "<cmd>lua require'dap'.step_over()<cr>",
       "Debug Step Over",
     },
+    ["<F-10>"] = {
+      "<cmd>lua require'dap'.step_over()<cr>",
+      "Debug Step Over",
+    },
     ["<leader>di"] = {
       "<cmd>lua require'dap'.step_into()<cr>",
       "Debug Step Into",
